@@ -1,0 +1,11 @@
+Package: *
+Pin: release a=testing
+Pin-Priority: 2
+
+Package: *
+Pin: release a=unstable
+Pin-Priority: 999
+
+Package: *
+Pin: release a=experimental
+Pin-Priority: 1

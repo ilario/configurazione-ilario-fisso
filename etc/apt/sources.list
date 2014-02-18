@@ -1,0 +1,14 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 7.3.0 _Wheezy_ - Official amd64 DVD Binary-1 20131215-04:56]/ wheezy contrib main
+
+deb http://ftp.it.debian.org/debian/ jessie main non-free contrib
+deb-src http://ftp.it.debian.org/debian/ jessie main non-free contrib
+deb http://ftp.it.debian.org/debian/ unstable main non-free contrib
+deb http://ftp.it.debian.org/debian/ experimental main non-free contrib
+
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+deb http://ftp.it.debian.org/debian/ jessie-updates main contrib non-free
+deb-src http://ftp.it.debian.org/debian/ jessie-updates main contrib non-free
