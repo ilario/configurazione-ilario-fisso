@@ -1,0 +1,19 @@
+#Forward all ssh and http connection requests from the internet to local system 192.168.1.5
+#ACTION         SOURCE  DEST            PROTO   DEST    SOURCE  ORIGINAL
+#                                       PORT    PORT(S) DEST
+SECTION NEW
+
+Invalid(DROP)   net     all             tcp
+Invalid(DROP)   loc     all             tcp
+SSH(ACCEPT)     net     $FW
+SSH(ACCEPT)     loc     $FW
+Ping(ACCEPT)    loc     $FW
+Ping(ACCEPT)    net     $FW
+HTTP(ACCEPT)    net     $FW
+HTTP(ACCEPT)    loc     $FW
+ACCEPT          loc     $FW             tcp 8080
+ACCEPT          net     $FW             tcp 8080
+ACCEPT          $FW     net
+ACCEPT          $FW     loc
+DNS(ACCEPT)     loc     $FW
+DNS(ACCEPT)     net     $FW
