@@ -1,10 +1,10 @@
 {% comment %} Load script if disquss comments are enabled and `page.comments` is either empty (index) or set to true {% endcomment %}
 {% if site.isso and page.comments != false %}
 
-<script data-isso="http://commenti.ilario.verona.ninux.org/"
+<script data-isso="http://ilario.verona.ninux.org:8080/"
             data-isso-css="true"
             data-isso-lang="it"
             data-isso-reply-to-self="false"
-            src="http://commenti.ilario.verona.ninux.org/js/embed.min.js">
+            src="http://ilario.verona.ninux.org:8080/js/embed.min.js">
 </script>
 {% endif %}
