@@ -2,20 +2,28 @@
 # and how to activate them. For more information, see interfaces(5).
 
 # The loopback network interface
-auto lo
+auto lo br0
 iface lo inet loopback
 
-auto eth1
-    allow-hotplug eth1
-    iface eth1 inet dhcp
+#auto eth1
+#    allow-hotplug eth1
+#    iface eth1 inet dhcp
 
 #auto eth2
  #   allow-hotplug eth2
  #   iface eth0 inet dhcp
  #   iface eth0 inet6 dhcp
 
-auto eth0
-    iface eth0 inet static
-        address 192.168.1.1
-        netmask 255.255.255.0
+#auto eth0
+#    iface eth0 inet static
+#        address 192.168.1.1
+#        netmask 255.255.255.0
 #        gateway 192.0.2.254
+
+ # Set up interfaces manually, avoiding conflicts with, e.g., network manager
+iface eth0 inet manual
+iface eth1 inet manual
+
+ # Bridge setup
+iface br0 inet dhcp
+       bridge_ports eth0 eth1
