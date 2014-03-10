@@ -1,5 +1,4 @@
 ?FORMAT 2
 #ZONE   INTERFACE     OPTIONS
 net        eth1          dhcp
-loc        eth0   
-#net        eth2         dhcp
+vr         br0           routeback

@@ -1,0 +1,4 @@
+#ZONE     TYPE     OPTIONS         IN OPTIONS        OUT OPTIONS
+net       ipv4
+fw      firewall
+vr       ipv4

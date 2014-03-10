@@ -1,8 +1,8 @@
 #SOURCE         DEST            POLICY          LOG LEVEL       LIMIT:BURST
-loc             net         	ACCEPT
+vr              net         	ACCEPT
 fw              all             ACCEPT
-net             all             DROP            info
+net             all             DROP            warning
  
 # The FOLLOWING POLICY MUST BE LAST
-all             all             REJECT          info
+all             all             DROP            warning
 
