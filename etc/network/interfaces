@@ -5,9 +5,9 @@
 auto lo br0
 iface lo inet loopback
 
-#auto eth1
-#    allow-hotplug eth1
-#    iface eth1 inet dhcp
+auto eth1
+    allow-hotplug eth1
+    iface eth1 inet dhcp
 
 #auto eth2
  #   allow-hotplug eth2
@@ -22,8 +22,8 @@ iface lo inet loopback
 
  # Set up interfaces manually, avoiding conflicts with, e.g., network manager
 iface eth0 inet manual
-iface eth1 inet manual
+iface eth2 inet manual
 
  # Bridge setup
 iface br0 inet dhcp
-       bridge_ports eth0 eth1
+       bridge_ports eth0 eth2
