@@ -21,9 +21,13 @@ auto eth1
 #        gateway 192.0.2.254
 
  # Set up interfaces manually, avoiding conflicts with, e.g., network manager
-iface eth0 inet manual
+iface wlan0 inet manual
 iface eth2 inet manual
 
  # Bridge setup
-iface br0 inet dhcp
-       bridge_ports eth0 eth2
+iface br0 inet static
+        bridge_ports wlan0 eth2
+        address 10.37.1.1
+        broadcast 10.37.1.255
+        netmask 255.255.254.0
+#        gateway 192.168.1.1
