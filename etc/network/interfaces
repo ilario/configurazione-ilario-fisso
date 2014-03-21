@@ -26,7 +26,7 @@ iface eth2 inet manual
 
  # Bridge setup
 iface br0 inet static
-        bridge_ports wlan0 eth2
+        bridge_ports eth2 wlan0
         address 10.37.1.1
         broadcast 10.37.1.255
         netmask 255.255.254.0
