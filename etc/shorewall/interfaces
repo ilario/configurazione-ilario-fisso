@@ -1,4 +1,4 @@
 ?FORMAT 2
 #ZONE   INTERFACE     OPTIONS
 net        eth1          dhcp
-vr         br0           routeback
+vr         wlan0         

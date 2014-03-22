@@ -2,7 +2,7 @@
 # and how to activate them. For more information, see interfaces(5).
 
 # The loopback network interface
-auto lo br0
+auto lo
 iface lo inet loopback
 
 auto eth1
@@ -21,12 +21,12 @@ auto eth1
 #        gateway 192.0.2.254
 
  # Set up interfaces manually, avoiding conflicts with, e.g., network manager
-iface wlan0 inet manual
+#iface wlan0 inet manual
 iface eth2 inet manual
 
  # Bridge setup
-iface br0 inet static
-        bridge_ports eth2 wlan0
+iface wlan0 inet static
+#        bridge_ports eth2 wlan0
         address 10.37.1.1
         broadcast 10.37.1.255
         netmask 255.255.254.0
