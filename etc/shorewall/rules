@@ -11,13 +11,20 @@ Ping(ACCEPT)    vr      $FW
 Ping(ACCEPT)    net     $FW
 HTTP(ACCEPT)    net     $FW
 HTTP(ACCEPT)    vr      $FW
-ACCEPT          vr      $FW             tcp 8080
+ACCEPT          vr      $FW             tcp 8080 #retroshare
 ACCEPT          net     $FW             tcp 8080
+ACCEPT          vr      $FW             udp 8080 
+ACCEPT          net     $FW             udp 8080
 ACCEPT          $FW     net
 ACCEPT          $FW     vr
 DNS(ACCEPT)     vr      $FW
 DNS(ACCEPT)     net     $FW
 ACCEPT          vr      $FW             tcp 5201 #iperf3
 ACCEPT          vr      $FW             udp 5201
+ACCEPT          net     $FW             tcp 4662 #amule
+ACCEPT          net     $FW             udp 4665
+ACCEPT          net     $FW             udp 4672
+ACCEPT          net     $FW             tcp 8000 #isso
+ACCEPT          vr      $FW             tcp 8000
 DNAT            net     vr:10.37.1.2 tcp 5646 #retroshare
 DNAT            net     vr:10.37.1.2 udp 5646
