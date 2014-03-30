@@ -13,4 +13,4 @@
 ################################################################################################################
 #INTERFACE:DEST         SOURCE          ADDRESS         PROTO   PORT(S) IPSEC   MARK    USER/   SWITCH  ORIGINAL
 #                                                                                       GROUP           DEST
-eth1                    192.168.1.0/24
+eth1                    10.37.0.0/16

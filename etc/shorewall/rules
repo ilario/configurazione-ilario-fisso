@@ -26,5 +26,5 @@ ACCEPT          net     $FW             udp 4665
 ACCEPT          net     $FW             udp 4672
 ACCEPT          net     $FW             tcp 8000 #isso
 ACCEPT          vr      $FW             tcp 8000
-DNAT            net     vr:10.37.1.2 tcp 5646 #retroshare
-DNAT            net     vr:10.37.1.2 udp 5646
+DNAT            net     vr:10.37.133.2 tcp 5646 #retroshare
+DNAT            net     vr:10.37.133.2 udp 5646
