@@ -1,0 +1,5 @@
+search verona.ninux.org
+nameserver 127.0.0.1
+
+#nameserver 212.17.192.216
+#nameserver 212.17.192.49

@@ -1,0 +1,24 @@
+$ORIGIN .
+; ---Area 1---
+$TTL 86400      ; 1 day
+
+; ---Area 2---
+verona.ninux.org.	IN	SOA	ilario.verona.ninux.org. iochesonome.gmail.com. (
+                                  2014041501 ; serial
+                                  86400      ; refresh (1 giorno)
+                                  28800      ; retry (8 ore)
+                                  604800     ; expire (1 settimana)
+                                  86400      ; minimum (1 giorno)
+                                );
+; ---Area 3---
+verona.ninux.org.	IN	NS	ilario.verona.ninux.org.
+
+; ---Area 4---
+$ORIGIN verona.ninux.org.
+;NOTA: ns1 è il nome del server che funge da DNS server
+ns1		IN	A	10.37.133.1
+; Qui potete inserire gli IP dei client-server che hanno un IP statico
+ilario		IN	A	10.37.133.1
+ilario-fisso	IN	A	10.37.133.1
+ilario-laptop	IN	A	10.37.133.2
+

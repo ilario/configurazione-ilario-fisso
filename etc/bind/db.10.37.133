@@ -1,0 +1,14 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ilario.verona.ninux.org.       iochesonome.gmail.com. (
+                                2014041501   ; serial
+                                604800       ; refresh
+                                86400        ; retry
+                                2419200      ; expire
+                                604800       ; negative cache ttl
+                                );
+@       IN      NS      ilario.verona.ninux.org.
+1	IN	NS      ilario.verona.ninux.org.
+2       IN      PTR     ilario-laptop.verona.ninux.org.
