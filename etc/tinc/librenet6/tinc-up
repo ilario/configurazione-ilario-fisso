@@ -1,0 +1,5 @@
+#!/bin/sh
+ip -6 link set $INTERFACE up txqueuelen 1000
+echo 2 > /proc/sys/net/ipv6/conf/$INTERFACE/accept_ra
+killall bmx6
+bmx6 --dev=br0 --dev=$INTERFACE /globalPrefix=2000::/3 --tunDev=tun --tunOut=publicv6 /network=2000::/3 /maxPrefixLen=64 --tunOut=inet6 /network=::/0 /maxPrefixLen=0
