@@ -26,5 +26,9 @@ ACCEPT          net     $FW             udp 4665
 ACCEPT          net     $FW             udp 4672
 ACCEPT          net     $FW             tcp 8000 #isso
 ACCEPT          vr      $FW             tcp 8000
+ACCEPT          net     $FW             tcp 51413 #transmissionbt
+ACCEPT          vr      $FW             tcp 51413
 DNAT            net     vr:10.37.133.2 tcp 5646 #retroshare
 DNAT            net     vr:10.37.133.2 udp 5646
+ACCEPT          net     $FW             tcp 655 #tinc-vpn
+ACCEPT          net     $FW             udp 655
